@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canVas1" width="200" height="200" style="border: 1px solid #000"></canvas>
+    <script>
+      const myCanvas = document.getElementById('canVas1')
+      // 创建context对象
+      const context = myCanvas.getContext('2d')
+      // 创建线性渐变
+      const grad = context.createLinearGradient(0, 0, 200, 0)
+      grad.addColorStop(0, 'red')
+      grad.addColorStop(1, 'white')
+      // 填充渐变
+      context.fillStyle = grad
+      context.fillRect(10, 10, 150, 80)
+    </script>
+  </body>
+</html>

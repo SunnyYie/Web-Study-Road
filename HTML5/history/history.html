@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./a.html">跳转到a</a>
+    <button id="button">前进</button>
+    <button id="btn1">刷新</button>
+  </body>
+  <script>
+    console.log(window.history)
+    const btn = document.getElementById('button')
+    btn.addEventListener('click', () => {
+      window.history.forward()
+    })
+    const btn1 = document.getElementById('btn1')
+    btn1.addEventListener('click', () => {
+      window.history.go()
+    })
+  </script>
+</html>

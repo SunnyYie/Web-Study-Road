@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canVas1" width="200" height="200" style="border: 1px solid #000"></canvas>
+    <script>
+      const myCanvas = document.getElementById('canVas1')
+      // 创建context对象
+      const context = myCanvas.getContext('2d')
+      // 绘制矩形
+      context.fillStyle = '#ff0000'
+      context.fillRect(0, 0, 100, 100)
+    </script>
+  </body>
+</html>

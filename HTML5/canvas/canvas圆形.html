@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canVas1" width="200" height="200" style="border: 1px solid #000"></canvas>
+    <script>
+      const myCanvas = document.getElementById('canVas1')
+      // 创建context对象
+      const context = myCanvas.getContext('2d')
+      // 绘制圆形
+      context.beginPath()
+      // 圆心：100,100，半径：50，
+      // 0, Math.PI * 2 表示绘制一个完整圆
+      context.arc(100, 100, 50, 0, Math.PI * 2)
+      context.stroke()
+    </script>
+  </body>
+</html>
