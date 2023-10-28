@@ -1,0 +1,9 @@
+p {
+  line-height: 30px; /*行高*/
+  /* 单行文本垂直居中 */
+  /* 1.如果一段文本只有一行，如果此时设置行高 = 盒子高，就可以保证单行文本垂直居中
+     2.多行文本垂直居中，还需要计算盒子的padding。(盒子width-总行高)/2 = padding
+     3.vertical-align: middle;
+     vertical-align属性可用于指定行内元素（inline）、行内块元素（inline-block）、表格的单元格（table-cell）的垂直对齐方式。主要是用于图片、表格、文本的对齐。
+  */
+}
