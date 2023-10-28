@@ -1,0 +1,11 @@
+div {
+  /* 标准盒模型：
+    width = content.width , height = content.height
+    box-sizing: border-box;
+
+    IE盒模型：
+     width = content + padding + border , height = content + padding + border
+     box-sizing: content-box;
+  */
+
+}

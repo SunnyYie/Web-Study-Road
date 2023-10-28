@@ -1,0 +1,7 @@
+div {
+  /*
+    1.一个标准流中的盒子在父亲里居中，可以将其设置margin: 0 auto属性。
+    2.绝对定位：left 50% , top 50% , margin-left 负自身宽度的一半, margin-top 负自身高度的一半。
+
+  */
+}

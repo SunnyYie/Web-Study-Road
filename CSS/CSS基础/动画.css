@@ -1,0 +1,28 @@
+div {
+  /*
+  1.transition: 让哪些属性进行过度 过渡的持续时间 运动曲线 延迟时间;
+  transition-timing-function: linear; 运动曲线。属性值可以是：
+    linear 线性
+    ease 减速
+    ease-in 加速
+    ease-out 减速
+    ease-in-out 先加速后减速
+  2.transform：
+    scale:缩放
+    rotate:旋转
+    translate:位移
+  3.动画
+  定义动画：
+    @keyframes 动画名{
+        from{ 初始状态 }
+        to{ 结束状态 }
+        或者通过百分比的形式
+    }
+
+  调用：
+    animation: 定义的动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行。(infinite 表示无限次)
+
+  */
+
+
+}

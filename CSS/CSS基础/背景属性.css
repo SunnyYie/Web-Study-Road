@@ -1,0 +1,18 @@
+div {
+  /*
+background-image:url(images/2.gif); 将图像设置为背景。
+background-repeat: no-repeat; 设置背景图片是否重复及如何重复，默认平铺满。（重要）
+background-position:center top; 设置背景图片在当前容器中的位置
+background-attachment:scroll; 设置背景图片是否跟着滚动条一起移动。 属性值可以是：scroll（与fixed属性相反，默认属性）、fixed（背景就会被固定住，不会被滚动条滚走）。
+background-size属性：设置背景图片的尺寸。
+ */
+}
+/* 同时设置多个背景 */
+
+.box {
+  height: 400px;
+  border: 1px solid #000;
+  margin: 100px auto;
+  /* 给盒子加多个背景，按照背景语法格式书写，多个背景使用逗号隔开 */
+  background: url(images/bg1.png) no-repeat left top, url(images/bg2.png) no-repeat right top, url(images/bg3.png) no-repeat right bottom, url(images/bg4.png) no-repeat left bottom, url(images/bg5.png) no-repeat center;
+}

@@ -1,0 +1,7 @@
+p {
+  /*
+word-spacing: 1cm; 单词之间的间距
+text-decoration: none; 字体修饰：none 去掉下划线、underline 下划线、line-through 中划线、overline 上划线
+text-align: center; 在当前容器中的对齐方式。属性值可以是：left、right、center（在当前容器的中间）、justify
+ */
+}
