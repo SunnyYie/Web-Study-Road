@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let p = Promise.resolve('sxc')
+      console.log(p)
+
+      let p1 = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('data1111')
+        }, 2000)
+      })
+      let p2 = Promise.resolve(p1)
+      console.log(p2)
+
+      let p3 = Promise.reject('error')
+      p3.catch((err) => {
+        console.log(err)
+      })
+
+      let p4 = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(null)
+        }, 1000)
+      })
+      p4.then((res) => {
+        console.log(res)
+        if (res) {
+          console.log('渲染成功')
+        } else {
+          // return Promise.reject('error')
+          throw new Error('Error')
+        }
+      }).catch((err) => {
+        console.log(err)
+      })
+    </script>
+  </body>
+</html>

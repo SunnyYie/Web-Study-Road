@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 变量是一个容器
+
+      let uname = prompt('请输入姓名')
+      let age = prompt('请输入年龄')
+      let sex = prompt('请输入性别')
+
+      document.write(uname, age, sex)
+
+      // 通过 var 关键词定义的全局变量属于 window 对象
+      // var carName = "porsche";
+      window.carName = 'porsche'
+
+      // 通过 let 关键词定义的全局变量不属于 window 对象：
+      let carName = 'porsche'
+
+      //let与var的区别
+      //var声明：1.先使用再声明
+      console.log(num)
+      var num = 10
+      //可以重复声明
+      var num = 20
+      console.log(num)
+
+      //变量提升，没有块级作用域
+
+      //常量  const 变量必须在声明时赋值
+      const PI = 3.14
+
+      // 可以创建 const 对象：
+      // 但是无法重新为常量对象赋值：
+      const car = { type: 'porsche', model: '911', color: 'Black' }
+      // car = {}
+      // console.log(car)
+      // 您可以更改属性：
+      car.color = 'White'
+      // 您可以添加属性：
+      car.owner = 'Bill'
+    </script>
+  </body>
+</html>

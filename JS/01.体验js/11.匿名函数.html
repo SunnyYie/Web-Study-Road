@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 形参默认值
+      function getSum(x = 0, y = 0) {
+        document.write(x + y)
+      }
+      getSum()
+      getSum(1, 2)
+
+      // 参数不匹配
+      function fn(a, b) {
+        console.log(a + b)
+      }
+      fn(1, 2, 3)
+      fn(1) // 1 + undefined = NaN
+
+      // 函数内部变量没有声明，直接赋值，当作全局变量来看
+      function fun() {
+        num = 10
+      }
+      fun()
+      console.log(num)
+
+      //1.函数表达式
+      // 先声明再调用
+      let fn = function () {
+        console.log('我是函数表达式')
+      }
+      fn()
+      // 具名函数可以先调用再声明
+      f()
+      function f() {
+        console.log(1)
+      }
+      //2.立即执行函数 防止变量污染
+      ;(function (x, y) {
+        console.log(x + y)
+      })(
+        1,
+        2,
+      )(
+        (function (a, b) {
+          console.log(a - b)
+        })(3, 1),
+      )
+
+      //3.逻辑中断
+      //只存在于&&和Ⅱ中，当满足一定条件会让右边代码不执行
+      function f1(x, y) {
+        x = x || 0
+        y = y || 0
+        console.log(x + y)
+      }
+      f1(1, 3)
+      let num = 10
+      console.log(false && num + 1) // false
+      console.log(11 && 22) // 都是真则返回最后一个真值
+      console.log(undefined && 20) // undefined
+      console.log(null && 20) // null
+
+      // 转换为布尔型
+      console.log(Boolean('')) // true
+      console.log(Boolean(0)) // false
+      console.log(Boolean(undefined)) // false
+      console.log(Boolean(NaN)) // false
+      console.log(Boolean(null)) // false
+    </script>
+  </body>
+</html>

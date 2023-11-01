@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript 数组</h1>
+
+    <p>Array.forEach() 为每个数组元素调用函数。</p>
+
+    <p>Internet Explorer 8 以及更早的版本不支持 Array.forEach()。</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      var cars = new Array('Saab', 'Volvo', 'BMW')
+      for (let i = 0; i < cars.length; i++) {
+        cars[i] = cars[i] + '车'
+      }
+
+      // 遍历数组
+      var fruits, text
+      fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+      text = '<ul>'
+      fruits.forEach(myFunction)
+      text += '</ul>'
+      document.getElementById('demo').innerHTML = text
+
+      // toString() 把数组转换为数组值（逗号分隔）的字符串。
+      document.getElementById('demo').innerHTML = fruits.toString()
+
+      // join() 方法也可将所有数组元素结合为一个字符串。
+      document.getElementById('demo').innerHTML = fruits.join(' * ')
+
+      function myFunction(value) {
+        text += '<li>' + value + '</li>'
+      }
+
+      // 新增 添加到数组末尾
+      let arr = ['pink', 'red']
+      arr.push('blue')
+      // 新增 添加到数组的开头
+      arr.unshift('skyblue')
+      console.log(fruits.unshift('Lemon')) // 返回新数组的长度。
+
+      // 删除 从数组中删除最后一个元素，并返回该元素
+      arr.pop()
+      // 删除第一个元素 并把所有其他元素“位移”到更低的索引，并返回该元素
+      console.log(arr.shift())
+      // 删除指定元素
+      // arr.splice(起始位置，删除几个元素(如果省略则默认从指定的起始位置删除到最后))
+      arr.splice(1, 1)
+
+      // 第一个参数（2）定义了应删除（替换）新元素的位置。
+      // 第二个参数（2）定义应删除多少元素。
+      // 其余参数（“Lemon”，“Kiwi”）定义要添加的新元素。
+      var removed = fruits.splice(2, 2, 'Lemon', 'Kiwi')
+      document.getElementById('demo2').innerHTML = '新数组：<br>' + fruits
+      document.getElementById('demo3').innerHTML = '已删除项：<br> ' + removed
+
+      // 会从开始参数选取元素，直到结束参数（不包括）为止
+      var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+      var citrus = fruits.slice(1, 3)
+      document.getElementById('demo').innerHTML = fruits + '<br><br>' + citrus
+    </script>
+  </body>
+</html>

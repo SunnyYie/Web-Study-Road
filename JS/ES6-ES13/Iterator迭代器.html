@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ['11', '22', '33']
+      for (let i in arr) {
+        console.log(i) // i是索引
+      }
+      for (let i of arr) {
+        console.log(i) // i是值
+      }
+
+      let iter = arr[Symbol.iterator]()
+      // 返回的是迭代器对象
+      console.log(iter)
+      console.log(iter.next())
+
+      // 原生默认具备Iterator接口的数据结构
+      // Array Set Map String arguments NodeList
+      function test() {
+        for (let i of arguments) {
+          console.log(i)
+        }
+      }
+      test(1, 2, 3, 4)
+
+      // 对象 非线性 默认没有Iterator 手动添加
+      let obj = {
+        0: 'sxc',
+        1: 'sy',
+        2: 'mcgdg',
+        length: 3,
+        [Symbol.iterator]: Array.prototype[Symbol.iterator],
+      }
+
+      for (let i of obj) {
+        console.log(i)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      for (let i = 1; i <= 3; i++) {}
+      // 内存分配
+      // 一般情况下全局变量不会回收，局部变量会自动回收
+      let num = 10
+      function fn() {
+        const str = 'andy'
+        // str = 'lily'
+        console.log(str)
+      }
+      fn()
+      fn()
+      fn()
+
+      // 内存泄漏：程序中分配的内存由于某种原因程序未释放或无法释放叫做内存泄漏
+      // 栈：由操作系统自动分配释放
+      // 堆：垃圾回收机制释放
+
+      // 垃圾回收机制算法
+      // 引用计数法
+      // 1.跟踪记录被引用的次数
+      // 2．如果被引用了一次，那么就记录次数1,多次引用会累加++
+      // 3. 如果减少一个引用就减1
+      // 4．如果引用次数是0，则释放内存
+
+      // 标记清除法
+      // 从根部（在JS中就是全局对象）出发定时扫描内存中的对象。凡是能从根部到达的对象，都是还需要使用的。那些无法由根部出发触及到的对象被标记为不再使用，稍后进行回收。
+    </script>
+  </body>
+</html>

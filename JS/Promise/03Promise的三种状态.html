@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myPromise = new Promise((resolve, reject) => {
+        setTimeout(
+          // reject()
+          // resolve(),
+          1000,
+        )
+      })
+      console.log(myPromise)
+      myPromise
+        .then(
+          () => {
+            console.log('发奖金')
+          },
+          () => {
+            console.log('不发奖金1')
+          },
+        )
+        // 只有失败时才会调用
+        .catch(() => {
+          console.log('不发奖金2')
+        })
+    </script>
+  </body>
+</html>

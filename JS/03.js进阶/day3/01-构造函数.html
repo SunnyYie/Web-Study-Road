@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 构造函数  公共的属性和方法 封装到 Star 构造函数里面了
+      // 1.公共的属性写到 构造函数里面
+      function Star(uname, age) {
+        this.uname = uname
+        this.age = age
+        // 每创建一个对象就会多创建一个sing()，浪费内存
+        // this.sing = function () {
+        //   console.log('唱歌')
+        // }
+      }
+      // 2.构造函数通过原型分配的函数是所有对象共享的，节约了内存
+      Star.prototype.sing = function () {
+        console.log('唱歌')
+      }
+      const ldh = new Star('刘德华', 55)
+      const zxy = new Star('张学友', 58)
+      ldh.sing() //调用
+      zxy.sing() //调用
+      // console.log(ldh === zxy)  // false
+      console.log(ldh.sing === zxy.sing) // true
+
+      // console.dir(Star.prototype)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript 循环</h1>
+
+    <p>for/in 语句循环遍历对象的属性。</p>
+
+    <p id="demo"></p>
+
+    <script>
+      var txt = ''
+      var person = { fname: 'Bill', lname: 'Gates', age: 62 }
+      var x
+      for (x in person) {
+        txt += person[x] + ' '
+      }
+      document.getElementById('demo').innerHTML = txt
+
+      // 遍历数组
+      const cars = ['BMW', 'Volvo', 'Mini']
+
+      let text = ''
+      for (let x of cars) {
+        text += x + '<br>'
+      }
+
+      document.getElementById('demo').innerHTML = text
+    </script>
+  </body>
+</html>

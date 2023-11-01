@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // arr.reduce(function(上一次值, 当前元素){}, 起始值)
+      // 1.没有起始值，则上一个值为数组的第一个数组元素
+      // 2.每一次循环把返回值做为下一次循环的上一次值
+      // 3.如果有起始值，则起始值作为上一次值
+
+      // arr.reduce(function (prev, item) {
+      // console.log(prev)
+      //   return prev + item
+      // }, 10)
+
+      // arr.reduce(function (prev, item) {
+      // console.log(prev)
+      //   return prev + item 1+2  3+3  ==>  6
+      // })
+
+      const arr = [1, 2, 3]
+      const re = arr.reduce((prev, item) => prev + item, 10)
+      console.log(re)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript 字符串搜索</h2>
+
+    <p>在字符串中搜索 "ain"：</p>
+
+    <p id="demo"></p>
+
+    <script>
+      // match() 方法根据正则表达式在字符串中搜索匹配项，并将匹配项作为 Array 对象返回。
+      let text = 'The rain in SPAIN stays mainly in the plain'
+      document.getElementById('demo').innerHTML = text.match(/ain/gi)
+
+      // 检查字符串是否包含 "world"，从位置 12 开始搜索
+      let text2 = 'Hello world, welcome to the universe.'
+      document.getElementById('demo').innerHTML = text.includes('world', 12)
+
+      // 如果字符串以指定值开头，则 startsWith() 方法返回 true，否则返回 false：
+      let text3 = 'Hello world, welcome to the universe.'
+      document.getElementById('demo').innerHTML = text.startsWith('Hello')
+
+      // 如果字符串以指定值结尾，则 endsWith() 方法返回 true，否则返回 false：
+      var text4 = 'Bill Gates'
+      text.endsWith('Gates') // 返回 true
+    </script>
+  </body>
+</html>

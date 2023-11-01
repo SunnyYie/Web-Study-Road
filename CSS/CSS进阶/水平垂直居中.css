@@ -1,0 +1,10 @@
+div {
+  /*
+    1.单行文本居中：父容器设置：text-align: center; 行高=盒子高度
+    2.绝对定位+margin：需要宽高
+    3.绝对定位+translate：不需要宽高
+    4.绝对定位+top,left,bottom,right = 0，margin：auto
+    5.父容器：flex，子元素：margin:auto
+
+  */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 隐式转换 -->
+    <!-- ＋号两边只要有一个是字符串，都会把另外一个转成字符串
+  除了+以外的算术运算符比如– * /等都会把数据转成数字类型 -->
+    <script>
+      console.log(+'123') //转换为数字型
+      console.log(2 - '2') // 0
+
+      //显示转换
+      let str = '123'
+      console.log(Number(str)) //转为数字型
+      console.log(Number('pink')) // NaN
+      console.log(parseInt('12px')) //只保留整数
+      console.log(parseInt('abc12')) // NaN
+      console.log(parseFloat('12.34')) //保留小数
+
+      //转换为bool型
+      console.log(Boolean('sxc')) //true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // toFixed 方法可以让数字指定保留的小数位数
+      const num = 10.923
+      // console.log(num.toFixed()) 10
+      console.log(num.toFixed(1)) // 10.9
+      const num1 = 10
+      console.log(num1.toFixed(2)) // 10.00
+
+      // 进制
+      let num2 = 0x100 // 十六进制 256
+      let num3 = 0b100 // 二进制 4
+      let num4 = 0o100 // 八进制 64
+
+      // ifFinite
+      let num5 = Number.isFinite(100) // true
+      // 传统isFinite()会进行隐式转换，isFinite('100')输出为true
+      let num6 = Number.isFinite('100') // false
+
+      // isNaN
+      let num7 = Number.isNaN(NaN) // true
+      let num8 = Number.isNaN('100') // false
+      // 传统isNaN()会进行隐式转换，isNaN('abcd')输出为true
+      let num9 = Number.isNaN('abcd') // false
+
+      // isInteger
+      let num10 = Number.isInteger(100.0) // true
+      let num11 = Number.isInteger(100.1) // false
+
+      // 极小常量
+      let num12 = Number.EPSILON
+      // 两个数的差小于极小常量则认为两个数相等
+      function ifEqual(x, y) {
+        return Math.abs(x - y) < Number.EPSILON
+      }
+
+      // Math.trunc 将小数抹除，返回一个整数
+      console.log(Math.trunc(1.8));// 1
+      console.log(Math.trunc(-1.8));// -1
+      console.log(Math.trunc(-1.2));// -1
+
+      // Math.sigh 判断一个数是正数，负数，还是0，对于非数值会将其转换为数值
+      Math.sign(0) // +0
+      Math.sign(-0) // -0
+      Math.sign('abcd') // NaN
+
+    </script>
+  </body>
+</html>

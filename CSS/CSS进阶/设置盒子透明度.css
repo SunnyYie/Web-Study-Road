@@ -1,0 +1,4 @@
+div {
+  opacity: 0.4;    缺点是：里面的内容也会半透明。
+  background: rgba(0,0,0,0.3);
+}

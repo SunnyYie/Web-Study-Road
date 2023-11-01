@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const obj = {
+        age: 18,
+      }
+      function fn(x, y) {
+        console.log(this)
+        console.log(x + y)
+      }
+      // 1. 调用函数
+      // 2. 改变this指向
+      //  fn.apply(this指向谁, 数组参数)
+      fn.apply(obj, [1, 2])
+
+      // 使用场景： 求数组最大值
+      const arr = [100, 44, 77]
+      const max = Math.max.apply(Math, arr)
+      const min = Math.min.apply(null, arr)
+      console.log(max, min) // 100 44
+      console.log(Math.max(...arr))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 自增运算符
+      let i = 1
+      i++
+      console.log(++i + 1) // 4
+      console.log(i++ + 1) // 4
+      console.log(i + 1) // 5
+
+      //比较运算符有隐式转换
+      console.log(2 == '2') // 检测值是否相等
+      console.log(2 === '2') // 检测值和类型
+      console.log(NaN == NaN) // false
+      // 字符串比较 比较Ascii码值
+
+      // 逻辑运算符
+
+      // 运算符优先级
+      // 括号> ++ -- !> * / % 后+ - > >= <= > == != > && || > 赋值运算符
+
+      //语句和表达式
+      //表达式是可以求值的代码
+      let num = 3 + 4
+      //语句是可以执行的一段代码
+      alert()
+
+      if (-2) {
+        console.log(-2)
+      }
+      if (0) {
+        console.log(0)
+      }
+
+      switch (4) {
+        case 1:
+          console.log(1)
+          break
+        case 2:
+          console.log(2)
+          break
+        case 3:
+          console.log(3)
+          break
+        default:
+          console.log('没有')
+      }
+    </script>
+  </body>
+</html>

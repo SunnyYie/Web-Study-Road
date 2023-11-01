@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>我的第一张网页</h1>
+
+    <p>我的第一个段落</p>
+
+    <!-- 在 HTML 文档完全加载后使用 document.write() 将删除所有已有的 HTML -->
+    <button onclick="document.write(5 + 6)">试一试</button>
+    <script>
+      // 1.文档输出内容
+      document.write('要输出的内容')
+      //控制台打印输出
+      console.log('控制台输出')
+
+      //2.输入
+      prompt('请输入你的年龄')
+
+      //3.代码执行顺序
+      // HTML文档流，从上到小执行
+      // alert和prompt跳过页面渲染，先被执行
+      //4.字面量
+      //数字  字符串  数组  对象
+    </script>
+  </body>
+</html>

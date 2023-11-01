@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function Star() {}
+      const ldh = new Star()
+      console.log(Star.prototype) // 含有constructor属性：Star()
+      // 构造函数Star()有一个prototype原型，这个原型里有一个constructor属性,这个属性指向该原型的构造函数Star()
+      console.log(Star.prototype.constructor === Star)  // true
+
+      // 因为对原型实施了赋值操作，导致该原型没有constructor属性
+      Star.prototype = {
+        // 重新指回创造这个原型对象的 构造函数
+        constructor: Star,
+        sing: function () {
+          console.log('唱歌')
+        },
+        dance: function () {
+          console.log('跳舞')
+        }
+      }
+      console.log(Star.prototype) //没有constructor属性
+    </script>
+  </body>
+</html>
