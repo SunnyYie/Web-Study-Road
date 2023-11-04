@@ -1,0 +1,19 @@
+@mixin flex($layout) {
+  display: flex;
+  justify-content: $layout;
+  align-items: $layout;
+  @content;
+}
+
+.nav {
+  @include flex(start) {
+    gap: 20px;
+  }
+}
+
+.header {
+  width: 100%;
+  @include flex(center) {
+    gap: 20px;
+  }
+}
