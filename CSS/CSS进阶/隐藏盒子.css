@@ -1,0 +1,5 @@
+div {
+  display: none;	  隐藏盒子，而且不占位置
+  visibility: hidden;	隐藏盒子，但是占位置
+  opacity: 0;       设置盒子的透明度占位置
+}

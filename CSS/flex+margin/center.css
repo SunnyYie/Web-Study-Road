@@ -1,0 +1,8 @@
+.father {
+  display: flex;
+}
+
+.son {
+  /* 当盒子为弹性盒布局，margin：auto会占满左右上下的剩余空间，实现居中的效果 */
+  margin: auto;
+}

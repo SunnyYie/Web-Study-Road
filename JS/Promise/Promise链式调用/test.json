@@ -1,0 +1,13 @@
+{
+  "news":[
+    {"id":1,"title":"真不错真不错","author":"sxc"},
+    {"id":2,"title":"真不错","author":"sy"}
+  ],
+  "comments":[
+    {"id":1,"body":"我是男人","newId":1},
+    {"id":2,"body":"我是女人","newId":1},
+    {"id":3,"body":"我年薪百万","newId":2},
+    {"id":4,"body":"我月薪百万","newId":2}
+
+  ]
+}

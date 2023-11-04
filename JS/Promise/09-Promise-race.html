@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let p1 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve('data-111')
+      //   }, 1000)
+      // })
+      // let p2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve('data-222')
+      //   }, 2000)
+      // })
+      // Promise.race([p1, p2]).then((res) => {
+      //   console.log(res)
+      // })
+
+      function ajax(url) {
+        return new Promise((resolve, reject) => {
+          let xhr = new XMLHttpRequest()
+          xhr.open('get', url, true)
+          xhr.send()
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+              if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(JSON.parse(xhr.responseText))
+              } else {
+                reject(xhr.responseText)
+              }
+            }
+          }
+        })
+      }
+
+      let p1 = ajax('ajax.json')
+      let p2 = new Promise((reject) => {
+        setTimeout(() => {
+          reject('超时')
+        }, 2000)
+      })
+      Promise.race([p1, p2])
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    </script>
+  </body>
+</html>

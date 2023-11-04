@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myPromise = new Promise((resolve, reject) => {
+        setTimeout(reject({ code: 401, info: 'aaaa' }), resolve(['1111', '22222']), 1000)
+      })
+      myPromise
+        .then((res) => {
+          console.log('发奖金', res)
+        })
+        .catch((error) => {
+          console.log('不发奖金2', error)
+        })
+    </script>
+  </body>
+</html>
