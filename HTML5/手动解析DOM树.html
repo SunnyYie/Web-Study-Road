@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function removeTag(fragment) {
+        return new DOMParser().parseFromString(fragment, 'text/html').body.textContent || ''
+      }
+      // 获取传入标签的文本内容
+      console.log(removeTag('<div>123</div>'));
+    </script>
+  </body>
+</html>
