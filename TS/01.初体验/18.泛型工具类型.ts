@@ -6,8 +6,8 @@ interface Props {
 // 1.Partial用来构造一个类型，将Type的所有属性设置为可选
 type PartialProps = Partial<Props>
 
-let p1: PartialProps = { children: [] }
-let p2: Props = { id: '', children: [] }
+let p100: PartialProps = { children: [] }
+let p200: Props = { id: '', children: [] }
 
 // 2.Readonly用来构造一个类型，将Type的所有属性设置为只读
 interface Props1 {
@@ -16,7 +16,7 @@ interface Props1 {
 }
 type ReadonlyProps = Readonly<Props1>
 
-let p3: ReadonlyProps = { id: '1', children: [] }
+let p300: ReadonlyProps = { id: '1', children: [] }
 // p3.id = '2'
 
 // 3.Pick<Type,Keys>从Type中选择一组属性来构造新类型
@@ -32,7 +32,7 @@ let p4: PickProps = { id: '1', title: '' }
 // 4.Record构造一个对象类型，属性键为Keys，属性类型为Type
 type RecordProps = Record<'a' | 'b' | 'c', string[]>
 
-let obj: RecordProps = {
+let obj0: RecordProps = {
   a: ['1'],
   b: ['2'],
   c: ['3'],

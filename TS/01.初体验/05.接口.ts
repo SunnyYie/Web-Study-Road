@@ -1,6 +1,6 @@
 // 接口：只能为对象指定类型
-interface IPerson {
-  name: string
+interface IPerson20 {
+  name1: string
   age: number
   sayHi(): void
 }
@@ -12,11 +12,11 @@ type IIPerson = {
 }
 type NumStr = number | string
 
-let person1: IPerson = {
-  name: 'jack',
+let person1: IPerson20 = {
+  name1: 'jack',
   age: 20,
   sayHi() {
-    console.log(person1.name, 'hello')
+    console.log(person1.name1, 'hello')
   },
 }
 

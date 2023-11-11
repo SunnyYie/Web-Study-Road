@@ -2,8 +2,8 @@ function id<Type>(value: Type): Type {
   return value
 }
 
-const num = id<number>(10)
-const str = id<string>('a')
+const num100 = id<number>(10)
+const str100 = id<string>('a')
 
 // 简化写法
 const num1 = id(20)
@@ -11,10 +11,9 @@ const str11 = id('b')
 
 // 添加约束方式1
 function index<Type>(value: Type[]): Type[] {
-  console.log(value.length)
   return value
 }
-const arr1 = index([1, 2, 3])
+const arr1000 = index([1, 2, 3])
 
 // 方式2
 interface ILength {
@@ -61,8 +60,8 @@ let obj111: IdFunc<number> = {
 }
 
 // 数组在ts中就是一个泛型接口
-const str1 = ['a', 'b', 'c']
-str1.forEach((item) => {})
+const str1000 = ['a', 'b', 'c']
+str1000.forEach((item) => {})
 
 const arr11 = [1, 2, 3]
 arr11.forEach((item) => {})

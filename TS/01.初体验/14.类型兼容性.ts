@@ -1,4 +1,4 @@
-let arr = ['a', 'b', 'c']
+let arr0000 = ['a', 'b', 'c']
 arr.forEach((item) => {})
 
 // ts遵循结构化类型系统 即y的成员至少与x相同，则x兼容y
@@ -16,9 +16,9 @@ class Point3D {
   z: number
 }
 
-const p: Point = new Point2D()
+const p12: Point = new Point2D()
 // Point兼容Point3D
-const p3: Point = new Point3D()
+const p30: Point = new Point3D()
 
 // 接口兼容性
 interface Point {
