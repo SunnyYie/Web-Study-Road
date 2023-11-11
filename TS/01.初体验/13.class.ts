@@ -65,8 +65,8 @@ class Sing implements Singable {
   }
 }
 
-let s = new Sing()
-s.sing()
+let s100 = new Sing()
+s100.sing()
 
 class Person1 {
   // 只读修饰符

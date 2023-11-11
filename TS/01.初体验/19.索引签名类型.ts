@@ -4,7 +4,7 @@ interface AnyObject {
   [key: string]: number
 }
 
-let obj1: AnyObject = {
+let obj100: AnyObject = {
   a: 1,
   b: 2,
 }
@@ -14,4 +14,4 @@ interface MyArray<T> {
   [n: number]: T
 }
 
-let arr: MyArray<number> = [1, 3, 5]
+let arr00: MyArray<number> = [1, 3, 5]
