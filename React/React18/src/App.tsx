@@ -4,6 +4,10 @@ import cls from 'classnames'
 import Add from './components/Add'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToNumber, decrement, fetchList } from './store/modules/counter'
+import { Outlet } from 'react-router-dom'
+// import { Route, Routes } from 'react-router-dom'
+// import Login from './pages/login'
+// import About from './pages/about'
 
 function App() {
   const [type, setType] = useState(false)
@@ -89,6 +93,9 @@ function App() {
       </FatherContext.Provider>
 
       <Add></Add>
+
+      {/* 配置二级路由的出口 */}
+      <Outlet></Outlet>
     </div>
   )
 }
