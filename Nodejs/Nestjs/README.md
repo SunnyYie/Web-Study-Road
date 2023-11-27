@@ -37,3 +37,14 @@ user.controller.ts
 502 网关错误
 
 3.nestjs控制器
+
+4.nestjs Session
+服务器为每个用户的浏览器创建的一个会话对象，记录到浏览器的cookie来区分用户
+安装express的session插件：yarn add express-session --save
+安装声明依赖：yarn add @types/express-session -D
+
+main.ts引入
+import * as session from 'express-session'
+// secret:生成服务端签名，rolling:每次请求强行设置cookie
+app.use(session({ secret: 'SXC', rolling: true, name: 'sxc.sid', cookie: { maxAge: 999999 } }))
+

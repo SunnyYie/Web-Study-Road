@@ -1,23 +1,49 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { reactive, ref } from 'vue'
+
+const labelPosition = ref<any>('top')
+
+const formLabelAlign = reactive({
+  name: '',
+  password: '',
+  code: '',
+})
+
+const codeUrl = ref<string>('/api/v1/user/code')
+
+const resetCode = () => {
+  codeUrl.value = codeUrl.value + '?' + Math.random()
+}
+
+const onSubmit = () => {
+  fetch('/api/v1/user/create', { method: 'POST', body: JSON.stringify(formLabelAlign), headers: { 'Content-Type': 'application/json' } }).then((res) =>
+    res.json()
+  ).then((res) => {
+    console.log(res);
+  })
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign" style="max-width: 460px">
+      <el-form-item label="Name">
+        <el-input v-model="formLabelAlign.name" />
+      </el-form-item>
+      <el-form-item label="密码">
+        <el-input v-model="formLabelAlign.password" />
+      </el-form-item>
+      <el-form-item label="验证码">
+        <el-input v-model="formLabelAlign.code" />
+        <img :src="codeUrl" @click="resetCode">
+      </el-form-item>
+    </el-form>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+    <el-button type="primary" @click="onSubmit">提交</el-button>
 
-  <RouterView />
+
+  </div>
 </template>
 
 <style scoped>
