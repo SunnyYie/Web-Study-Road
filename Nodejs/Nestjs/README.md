@@ -1,6 +1,7 @@
 1.安装 nestjs cli
 npm i @nestjs/cli
-启动：npm run start:dev 2.常用命令
+启动：npm run start:dev 
+2.常用命令
 nest --help
 // 生成 controller
 nest g co demo
