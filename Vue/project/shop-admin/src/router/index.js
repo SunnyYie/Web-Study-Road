@@ -20,6 +20,7 @@ import SettingBuy from '~/pages/setting/buy.vue'
 import SettingShip from '~/pages/setting/ship.vue'
 import DistributionIndex from '~/pages/distribution/index.vue'
 import DistributionSetting from '~/pages/distribution/setting.vue'
+import Test from '~/pages/test/test.vue'
 import Admin from '~/layouts/admin.vue'
 
 // 默认路由 所有用户共享
@@ -155,6 +156,12 @@ const asyncRoutes = [
     component: DistributionSetting,
     meta: { title: '分销设置' },
   },
+  {
+    path: '/test/test',
+    name: '/test/test',
+    component: Test,
+    meta: { title: '测试模块' }
+  }
 ]
 
 export const router = createRouter({

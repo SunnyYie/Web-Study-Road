@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+  import Test from './pages/test/test.vue'
+</script>
 
 <template>
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
+  <Test></Test>
 </template>
 
 <style>

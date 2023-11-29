@@ -10,7 +10,13 @@ export default defineConfig({
     },
   },
   server: {
+    port: 3001,
     proxy: {
+      '/myapi': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/myapi/, ''),
+      },
       '/api': {
         target: 'http://ceshi13.dishait.cn',
         changeOrigin: true,
@@ -18,7 +24,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [vue(), WindiCSS()], 
+  plugins: [vue(), WindiCSS()],
 })
 
 
