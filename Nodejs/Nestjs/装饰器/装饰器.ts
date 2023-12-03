@@ -1,6 +1,7 @@
 /** 类装饰器 */
 const doc: ClassDecorator = (target: any) => {
   target.prototype.name = 'sxy'
+  console.log(target)
 }
 
 /** 属性装饰器 */
@@ -25,22 +26,22 @@ class SXC {
   constructor() {}
 }
 
-class SXY {
-  @pDoc
-  public name: string
-  constructor() {
-    this.name = 'xxy'
-  }
+// class SXY {
+//   @pDoc
+//   public name: string
+//   constructor() {
+//     this.name = 'xxy'
+//   }
 
-  @mDoc
-  getName() {
-    return this.name
-  }
+//   @mDoc
+//   getName() {
+//     return this.name
+//   }
 
-  setName(@paramDoc name: string) {
-    this.name = name
-  }
-}
+//   setName(@paramDoc name: string) {
+//     this.name = name
+//   }
+// }
 
 const sxc: any = new SXC()
 

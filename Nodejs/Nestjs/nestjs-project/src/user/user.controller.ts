@@ -13,6 +13,7 @@ import {
   Req,
   Res,
   Session,
+  Inject,
 } from '@nestjs/common'
 import { UserService } from './user.service'
 import { CreateUserDto } from './dto/create-user.dto'
@@ -25,7 +26,11 @@ import * as svgCaptcha from 'svg-captcha'
   version: '1',
 })
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    // 注入全局模块
+    @Inject('config') private readonly base: any,
+  ) {}
 
   // @Get()
   // findName(@Request() req) {
@@ -86,7 +91,7 @@ export class UserController {
 
   @Get()
   findAll() {
-    return this.userService.findAll()
+    return this.base
   }
 
   @Get(':id')
